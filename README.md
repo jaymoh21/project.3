@@ -37,7 +37,7 @@ This project transforms a traditional gallery layout into a lively shop interfac
 
 ---
 
-🛠 Tech Stack
+ Tech Stack
 
 - React – Component‑based UI library
 - TailwindCSS – Utility‑first CSS framework for styling
