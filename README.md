@@ -17,7 +17,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-*Anime Emporium*
+##*Anime Emporium*
 
 An immersive, anime inspired e‑commerce homepage built with React and TailwindCSS.  
 This project transforms a traditional gallery layout into a lively shop interface for anime merchandise  figures, apparel, posters, and collectibles  designed to feel magical, narrative driven, and engaging.
@@ -75,9 +75,6 @@ Prerequisites
 
 Installation
 `bash
-
-Clone the repository
-git clone https://github.com/your-username/anime-emporium.git
 
 Navigate into the project
 cd anime-emporium
