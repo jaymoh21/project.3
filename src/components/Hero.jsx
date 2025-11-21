@@ -1,6 +1,11 @@
 import heroBg from "../assets/images/1.jpeg";
+import Button from "./Button";
 
 function Hero() {
+  const scrollToAllFeatures = () => {
+    const el = document.getElementById("allfeatures");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <header
       className="relative bg-cover bg-center text-white shadow-lg h-[90vh]"
@@ -44,12 +49,16 @@ function Hero() {
 
         <p className="max-w-2xl mx-auto text-lg text-gray-200 mb-6">
           Exclusive figures, apparel, and collectibles inspired by your favorite
-          anime adventures  crafted for true fans.
+          anime adventures crafted for true fans.
         </p>
 
-        <button className="bg-pink-500 hover:bg-pink-600 transition px-10 py-3 rounded-full text-white font-semibold">
+        <Button
+          onClick={scrollToAllFeatures}
+          className="bg-pink-500 hover:bg-pink-600 text-white px-10 py-3"
+          ariaLabel="Shop Now"
+        >
           Shop Now
-        </button>
+        </Button>
       </div>
 
       {/* STATS — positioned at bottom */}

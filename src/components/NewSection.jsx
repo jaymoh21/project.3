@@ -2,8 +2,13 @@ import new1 from "../assets/images/3.jpeg";
 import new2 from "../assets/images/4.jpeg";
 import new3 from "../assets/images/5.jpeg";
 import new4 from "../assets/images/6.jpeg";
+import Button from "./Button";
 
 function NewSection() {
+  const scrollToAllFeatures = () => {
+    const el = document.getElementById("allfeatures");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section className="bg-neutral-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20">
       {/* TEXT */}
@@ -13,13 +18,17 @@ function NewSection() {
         </h2>
 
         <p className="text-gray-600 max-w-md mx-auto md:mx-0 leading-relaxed">
-          Check out our newest anime-inspired treasures  figures, apparel, and
+          Check out our newest anime-inspired treasures figures, apparel, and
           collectibles designed to bring your favorite worlds closer than ever.
         </p>
 
-        <button className="bg-pink-600 hover:bg-pink-700 transition px-8 py-3 rounded-full text-white font-semibold shadow-md">
+        <Button
+          onClick={scrollToAllFeatures}
+          className="bg-pink-600 hover:bg-pink-700 transition px-8 py-3 text-white"
+          ariaLabel="Shop New Arrivals"
+        >
           Shop New Arrivals
-        </button>
+        </Button>
       </div>
 
       {/* IMAGES */}

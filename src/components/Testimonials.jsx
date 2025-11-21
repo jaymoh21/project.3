@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import testimonialImg from "../assets/images/16.jpeg";
+import Button from "./Button";
 
 function Testimonials() {
   const testimonials = [
@@ -71,18 +72,20 @@ function Testimonials() {
 
         {/* Arrows */}
         <div className="flex gap-4 mt-6">
-          <button
+          <Button
             onClick={prev}
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition"
+            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200"
+            ariaLabel="Previous testimonial"
           >
             ←
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={next}
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition"
+            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200"
+            ariaLabel="Next testimonial"
           >
             →
-          </button>
+          </Button>
         </div>
       </div>
 

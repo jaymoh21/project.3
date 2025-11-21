@@ -1,6 +1,21 @@
+import { useState } from "react";
 import ctaBg from "../assets/images/download.jpeg";
+import Button from "./Button";
 
 function CTA() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    const isEmail = email && email.includes("@");
+    if (!isEmail) {
+      alert("Please enter a valid email address");
+      return;
+    }
+    // simple success feedback
+    alert(`Thanks! ${email} has been subscribed.`);
+    setEmail("");
+  };
+
   return (
     <section
       className="relative py-24 w-full bg-cover bg-center"
@@ -24,21 +39,18 @@ function CTA() {
           <input
             type="email"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="px-4 py-3 rounded-md sm:rounded-l-md sm:rounded-r-none text-black w-full sm:w-72 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
           />
 
-          <button
-            className="
-              bg-gradient-to-r from-pink-600 to-purple-500
-              px-6 py-3 rounded-md sm:rounded-r-md sm:rounded-l-none
-              font-semibold text-white
-              transition-all duration-200
-              hover:from-pink-700 hover:to-purple-600
-              hover:shadow-md
-            "
+          <Button
+            onClick={handleSubscribe}
+            className={`bg-gradient-to-r from-pink-600 to-purple-500 px-6 py-3 rounded-md sm:rounded-r-md sm:rounded-l-none font-semibold text-white transition-all duration-200 hover:from-pink-700 hover:to-purple-600 hover:shadow-md`}
+            ariaLabel="Subscribe"
           >
             Subscribe
-          </button>
+          </Button>
         </div>
       </div>
     </section>
